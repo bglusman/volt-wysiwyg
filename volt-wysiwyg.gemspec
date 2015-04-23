@@ -8,10 +8,10 @@ version = File.read(File.expand_path('../VERSION', __FILE__)).strip
 Gem::Specification.new do |spec|
   spec.name          = "volt-wysiwyg"
   spec.version       = version
-  spec.authors       = ["Brian Glusman"]
-  spec.email         = ["brian@glusman.me"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.authors       = ["Brian Glusman", "Bobby Grayson"]
+  spec.email         = ["brian@glusman.me", "bobbygrayson@gmail.com"]
+  spec.summary       = %q{A Quill.js Component for Volt.}
+  spec.description   = %q{See Summary}
   spec.homepage      = ""
   spec.license       = "MIT"
 
