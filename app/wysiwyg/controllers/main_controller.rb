@@ -1,6 +1,8 @@
 module Wysiwyg
   class MainController < Volt::ModelController
     attr_reader :quill, :text
+    model :store
+
     def initialize(attributes)
       @text = attributes.locals[:text]
     end
@@ -14,6 +16,12 @@ module Wysiwyg
         puts 'its empty'
         `#{quill}.insertText(0, #{text})`
       end
+    end
+
+    def save_quill
+      html = `#{@quill}.getHTML();`
+      _quills << { content: html }
+      `#{@quill}.setHTML('');`
     end
 
   end
