@@ -26,7 +26,7 @@ component 'wysiwyg'
 
 To add an editor simple add the `<:wysiwyg />` tag. It can optionally be passed a default message.
 
-`<:wysiwyg text='hello' />
+`<:wysiwyg text='hello' />`
 
 See the example application that is included for a direct example.
 
