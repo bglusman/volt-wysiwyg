@@ -1,6 +1,6 @@
-# Volt::Wysiwyg
+# Volt-wysiwyg
 
-TODO: Write a gem description
+A thing wrapper for Quill.js for Volt.
 
 ## Installation
 
@@ -16,9 +16,19 @@ Or install it yourself as:
 
     $ gem install volt-wysiwyg
 
+Now proceed to open `app/main/config/components.rb` and add:
+
+```RUBY
+component 'wysiwyg'
+```
+
 ## Usage
 
-TODO: Write usage instructions here
+To add an editor simple add the `<:wysiwyg />` tag. It can optionally be passed a default message.
+
+`<:wysiwyg text='hello' />
+
+See the example application that is included for a direct example.
 
 ## Contributing
 
