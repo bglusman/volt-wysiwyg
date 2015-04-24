@@ -1,4 +1,14 @@
 <:Body>
+  <:toolbar></:toolbar>
+  <div class="quill-editor"><div></div></div>
+
+
+  <button e-click="save_quill">Save</button>
+  <% css_files.each do |css_file| %>
+    <link href="<%= css_file %>" media="all" rel="stylesheet" type="text/css" />
+  <% end %>
+
+<:Toolbar>
   <div class="toolbar-container"><span class="ql-format-group">
     <select title="Font" class="ql-font">
       <option value="sans-serif" selected>Sans Serif</option>
@@ -91,10 +101,3 @@
       <option value="right"></option>
       <option value="justify"></option>
     </select></span><span class="ql-format-group"><span title="Link" class="ql-format-button ql-link"></span><span class="ql-format-separator"></span><span title="Image" class="ql-format-button ql-image"></span><span class="ql-format-separator"></span><span title="List" class="ql-format-button ql-list"></span></span></div>
-  <div class="quill-editor"><div></div></div>
-
-
-  <button e-click="save_quill">Save</button>
-  <% css_files.each do |css_file| %>
-    <link href="<%= css_file %>" media="all" rel="stylesheet" type="text/css" />
-  <% end %>
