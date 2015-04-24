@@ -2,16 +2,13 @@ module Wysiwyg
   class MainController < Volt::ModelController
 
     def initialize(attributes)
-      Document.ready? do
-        if @quill.nil?
-          puts 'think @quill is nill'
-          `var quill = new Quill('.quill-editor');`
-          @quill = `quill`
-        end
-        `#{@quill}.addModule('toolbar', { container: '.quill-toolbar' });`
-        Element.find('.quill-editor > div').html(attributes.locals[:text])
-      end
+      index_ready
+      Element.find('.quill-editor > div').html(attributes.locals[:text])
     end
-
+    
+    def index_ready
+      `var quill = new Quill('.quill-editor');`
+      `quill.addModule('toolbar', { container: '.quill-toolbar' });`
+    end
   end
 end
