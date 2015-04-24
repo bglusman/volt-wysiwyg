@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/volt-wysiwyg.svg)](http://badge.fury.io/rb/volt-wysiwyg)
 # Volt-wysiwyg
 
 A thing wrapper for Quill.js for Volt.
