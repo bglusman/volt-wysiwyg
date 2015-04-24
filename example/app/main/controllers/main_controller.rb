@@ -1,8 +1,19 @@
 # By default Volt generates this controller for your Main component
 module Main
   class MainController < Volt::ModelController
+
     def index
       # Add code for when the index view is loaded
+      self.model = store._posts.fetch_first do |post|
+        if post
+          next post
+        else
+          store._posts.append({text: ''}).then do |post|
+            next post
+          end
+        end
+      end
+
     end
 
     def about
